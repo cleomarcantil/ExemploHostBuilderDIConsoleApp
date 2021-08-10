@@ -20,7 +20,9 @@ namespace ExemploHostBuilderDIConsoleApp
 				.ConfigureServices((context, services) =>
 				{
 					services.AddHostedService<Application>();
-					services.AddScoped<TesteService>();
+
+					new Startup(context.Configuration)
+						.ConfigureServices(services);
 				});
 
 	}

@@ -33,7 +33,7 @@ namespace ExemploHostBuilderDIConsoleApp
 			{
 				while (!cancellationToken.IsCancellationRequested)
 				{
-					Console.Write("Digite algo: ");
+					Console.Write("Digite algo e pressione ENTER: ");
 					
 					if (Console.ReadLine() is { } input)
 						Console.WriteLine($"TesteService: {testeService.FormatarMensagem(input)}");
